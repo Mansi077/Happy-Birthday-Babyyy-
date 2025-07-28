@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>From Mannu to Kittu 🎀</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ffc8dd, #bde0fe);
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+
+    .kawaii {
+      width: 180px;
+      margin: 0 auto;
+    }
+
+    .click-btn {
+      background-color: #ff70a6;
+      color: white;
+      font-size: 22px;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      margin-top: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: all 0.2s ease;
+    }
+
+    .click-btn:hover {
+      background-color: #ff4d6d;
+      transform: scale(1.05);
+    }
+
+    .love-message {
+      display: none;
+      font-size: 28px;
+      color: #ff1c68;
+      margin-top: 40px;
+      animation: popIn 1s ease forwards;
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .floating-sticker {
+      position: absolute;
+      animation: float 8s infinite ease-in-out;
+      opacity: 0.8;
+      width: 60px;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Audio -->
+  <audio id="bgMusic">
+    <source src="the-ronettes-be-my-baby_WuyP7L3e.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container">
+    <!-- WORKING Hello Kitty Image -->
+    <img class="kawaii" src="https://upload.wikimedia.org/wikipedia/en/2/24/Hello_Kitty_character_portrait.png" alt="Hello Kitty">
+    
+    <br>
+    <button class="click-btn" onclick="showLove()">Click Me!</button>
+
+    <div class="love-message" id="loveMsg">
+      I love you baby 💖🫶✨🎀❤️
+    </div>
+  </div>
+
+  <!-- Floating Stickers -->
+  <img src="https://i.ibb.co/YdTYm9C/hello-kitty-sticker.png" class="floating-sticker" style="left:10%; animation-delay: 0s;">
+  <img src="https://i.ibb.co/NpHZLZJ/spiderman-gwen.png" class="floating-sticker" style="left:50%; animation-delay: 2s;">
+  <img src="https://i.ibb.co/Y2yt0Kc/batman.png" class="floating-sticker" style="left:80%; animation-delay: 4s;">
+  <img src="https://i.ibb.co/QYZ8RtM/heart.png" class="floating-sticker" style="left:30%; animation-delay: 1s;">
+  <img src="https://i.ibb.co/v1zPzz3/star.png" class="floating-sticker" style="left:60%; animation-delay: 3s;">
+
+  <script>
+    function showLove() {
+      document.getElementById("loveMsg").style.display = "block";
+      document.getElementById("bgMusic").play(); // Start music after click
+    }
+  </script>
+
+</body>
+  </html>
